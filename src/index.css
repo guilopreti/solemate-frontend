@@ -357,8 +357,8 @@ tr:hover td { background: var(--bg-secondary); }
   position: fixed; inset: 0;
   /* FIX: Transparent background instead of dark blur */
   background: transparent;
-  display: flex; align-items: center; justify-content: center;
-  z-index: 200; padding: 20px;
+  display: flex; align-items: flex-start; justify-content: center; /* Fixar no topo */
+  z-index: 200; padding: 100px 20px 20px; /* Margem superior para não colar no topo */
   pointer-events: none; /* Let clicks pass through overlay area */
 }
 
