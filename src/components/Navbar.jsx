@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-brand">
-        <span className="navbar-brand-icon">👟</span>
+        <img src="/logo.svg" alt="SoleMate Logo" style={{ width: "32px", height: "32px", borderRadius: "50%" }} />
         <span className="navbar-brand-text">SoleMate</span>
       </Link>
       <div className="navbar-links">
