@@ -51,6 +51,7 @@ export default function ProdutosPage() {
   const abrirForm = (produto = null) => {
     setProdutoEditando(produto);
     setShowForm(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const fecharForm = () => {
@@ -89,6 +90,7 @@ export default function ProdutosPage() {
                 <option value="Puma">Puma</option>
                 <option value="Vans">Vans</option>
                 <option value="Asics">Asics</option>
+                <option value="Outra">Outra</option>
               </select>
             </div>
             <div className="form-group">
@@ -136,9 +138,12 @@ export default function ProdutosPage() {
         {/* Grade de Produtos */}
         <div>
           {loading ? (
-            <div className="loading">
+            <div className="loading" style={{textAlign: 'center', padding: '40px'}}>
               <div className="spinner"></div>
-              Buscando lançamentos...
+              <div style={{fontWeight: 600}}>Buscando lançamentos...</div>
+              <small style={{color: 'var(--text-muted)', display: 'block', marginTop: '12px', lineHeight: 1.5}}>
+                Nossos servidores gratuitos podem levar alguns segundos para "acordar" no primeiro acesso. <br/>Agradecemos a paciência! 🚀
+              </small>
             </div>
           ) : produtos.length === 0 ? (
             <div className="empty-state" style={{display: 'flex', alignItems: 'center', gap: '12px'}} >

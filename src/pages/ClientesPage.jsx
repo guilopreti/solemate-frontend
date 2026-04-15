@@ -40,6 +40,7 @@ export default function ClientesPage() {
   const abrirForm = (cliente = null) => {
     setClienteEditando(cliente);
     setShowForm(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const fecharForm = () => {
@@ -62,9 +63,12 @@ export default function ClientesPage() {
       </div>
 
       {loading ? (
-        <div className="loading">
+        <div className="loading" style={{textAlign: 'center', padding: '40px'}}>
           <div className="spinner"></div>
-          Carregando clientes...
+          <div style={{fontWeight: 600}}>Carregando clientes...</div>
+          <small style={{color: 'var(--text-muted)', display: 'block', marginTop: '12px', lineHeight: 1.5}}>
+            Nossos servidores gratuitos podem levar alguns segundos para "acordar" no primeiro acesso. <br/>Agradecemos a paciência! 🚀
+          </small>
         </div>
       ) : clientes.length === 0 ? (
         <div className="empty-state" style={{display: 'flex', alignItems: 'center', gap: '12px'}}>

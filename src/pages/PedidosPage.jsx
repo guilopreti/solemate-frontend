@@ -199,7 +199,13 @@ export default function PedidosPage() {
           <h2 className="section-title" style={{padding: '0 32px', marginBottom: '16px', borderBottom: 'none'}}>Todos os Pedidos</h2>
           
           {loading ? (
-             <div className="loading" style={{flex: 1}}><div className="spinner"></div></div>
+             <div className="loading" style={{flex: 1, textAlign: 'center', padding: '40px'}}>
+               <div className="spinner"></div>
+               <div style={{fontWeight: 600}}>Carregando lista de pedidos...</div>
+               <small style={{color: 'var(--text-muted)', display: 'block', marginTop: '12px', lineHeight: 1.5}}>
+                 Nossos servidores gratuitos podem levar alguns segundos para "acordar" no primeiro acesso. <br/>Agradecemos a paciência! 🚀
+               </small>
+             </div>
           ) : pedidos.length === 0 ? (
             <div className="empty-state" style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'  }}>
               <div className="empty-state-icon">📦</div>
