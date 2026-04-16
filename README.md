@@ -6,6 +6,8 @@
 
 Aplicação React responsável pela interface voltada ao cliente de um sistema de E-Commerce (loja de Sneakers). O foco tecnológico do projeto recai sobre a **Comunicação Ativa com a API REST** do Node.js, agora integrada diretamente ao **Supabase (PostgreSQL e Storage)**.
 
+Acesse em: https://solemate-frontend.vercel.app/
+
 ## 🌟 Funcionalidades Principais
 
 *   **Catálogo Responsivo Premium**: Lista de lançamentos atualizada via backend em tempo real. Filtros dinâmicos.
